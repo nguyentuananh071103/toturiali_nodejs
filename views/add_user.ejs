@@ -1,0 +1,31 @@
+<%-include('include/_header')%>
+<%-include('include/_bootstrap')%>
+  <main id="site-main">
+    <div class="container">
+        <a href="/"><h6>All User <i class="fa-solid fa-arrow-right-from-bracket"></i></h6></a>
+     <h4 >New User</h4>
+        <form action="/api/users" method="POST" id="add_user">
+            <div class="mb-3">
+                <label for="exampleInputName"  class="form-label">Name</label>
+                <input type="text" name="name"class="form-control" placeholder="Nguyễn Văn A">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail" class="form-label">Email</label>
+                <input type="text" name="email"class="form-control" placeholder="nguyenvana@gmail.com">
+              </div>
+          <div>
+              <label for="exampleInputGender" class="form-label">Gender</label>
+              <input name="gender" type="radio" value="Male" />Male
+              <input name="gender" type="radio" value="Female" />Female
+          </div>
+          <div>
+              <label for="exampleInputStatus" class="form-label">Status</label>
+              <input name="status" type="radio" value="Active" />Active
+              <input name="status" type="radio" value="Inactive" />Inactive
+          </div>
+              <button type="submit" class="btn btn-outline-success">Save</button>
+        </form>
+    </div>
+</main>
+<%-include('include/_footer')%>
+
